@@ -7,7 +7,7 @@
 
 <br>
 **Features**
- - Searchengine frendly pre rendered content
+ - Searchengine friendly pre rendered content
  - Custom jQuery selector localization in JSON
  - Repository pattern Dependency injection
  - Very clean front and backend separation
