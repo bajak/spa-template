@@ -1,0 +1,46 @@
+@inherits System.Web.Mvc.WebViewPage
+@using System.Web.Optimization
+
+<!doctype html>
+<html lang="en" ng-controller="IndexCtrl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta name="title" content="{{index.metaTitle}}">
+        <meta name="description" content="{{index.metaDescription}}"/>
+        <title ng-bind="index.metaTitle"></title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    @if (HttpContext.Current.IsDebuggingEnabled)
+    {
+        <link rel="stylesheet" type="text/css" href="../content/styles/debug/debug.css" />
+        <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+        <script>window.jQuery || document.write('<script src="../scripts/libs/jquery-2.0.3.js"><\/script>')</script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+        <script>window.angular || document.write('<script src="../scripts/libs/angular.js"><\/script>')</script>
+    }
+    else
+    {
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../scripts/libs/jquery-2.0.3.min.js"><\/script>')</script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+        <script>window.angular || document.write('<script src="../scripts/libs/angular.min.js"><\/script>')</script>
+    }
+        @Styles.Render("~/content/styles/css")
+        @Scripts.Render("~/scripts/app/bundle")
+    </head>
+    <body complete ng-class="authenticated()">
+        <div alert_ model="item" ng-repeat="item in alerts.items"
+             close="alerts.close($index)"></div>
+        <p class="lang-label"></p>
+        <a id="lang-de" href="" ng-click="changeLanguage('de-de')"></a>
+        <a id="lang-en" href="" ng-click="changeLanguage('en-en')"></a>
+        <br/>
+        <div class="menu">
+            <p></p>
+            <a href="/Start"></a>
+            <a href="/User"></a>
+            <a href="/About"></a>
+        </div>
+        <div id="page" class="toggle-1" ng-view></div>
+    </body>
+</html>

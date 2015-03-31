@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="D:\Projects\Software\bajak.net\spa.web\exportToHTML" />
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/scripts/libs/angular-route.js" />
+  </component>
+  <component name="ProjectRootManager" version="2" />
+</project>
+

@@ -1,0 +1,9 @@
+"$index.metaTitle" : "SPA Meta Title EN",
+"$index.metaDescription" : "SPA Meta Description EN",
+".lang-label" : "Language: ",
+"#lang-de" : "DE",
+"#lang-en" : "EN",
+".menu > p" : "Views: ",
+".menu > a[href='/Start']" : "Start",
+".menu > a[href='/User']" : "User",
+".menu > a[href='/About']" : "About"

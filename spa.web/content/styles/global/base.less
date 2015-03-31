@@ -1,0 +1,95 @@
+@import "theme";
+
+.Base()
+{
+  .alert {
+    padding: 8px 35px 8px 14px;
+    border: 1px solid;
+    text-align: center;
+    font-size: 18px;
+    z-index: 100;
+  }
+
+  .alert-success
+  {
+    background-color: #dff0d8;
+    border-color: #c7dab7;
+    color: #468847;
+  }
+
+  .alert-error
+  {
+    background-color: #f2dede;
+    border-color: #e7ccd0;
+    color: #b94a48;
+  }
+
+  .alert-warning
+  {
+    background-color: #fcf8e3;
+    border-color: #eee1c8;
+    color: #c09853;
+  }
+
+  .alert .alert-close
+  {
+    float: right;
+    top: 4px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    background: transparent;
+    border-style: none;
+    opacity: 0.5;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .toggle-1 {
+    transition: opacity linear 1s;
+  }
+
+  .toggle-1.ng-enter{
+    opacity: 0;
+  }
+
+  .toggle-1.ng-enter-active{
+    opacity: 1;
+  }
+
+  .toggle-1.ng-leave{
+    opacity: 1;
+    position: absolute;
+  }
+
+  .toggle-1.ng-leave-active{
+    opacity: 0;
+    position: absolute;
+  }
+
+  .toggle-2 {
+    transition: opacity linear 1s;
+  }
+
+  .toggle-2.ng-enter{
+    opacity: 0;
+  }
+
+  .toggle-2.ng-enter-active{
+    opacity: 1;
+  }
+
+  .toggle-2.ng-leave{
+    opacity: 1;
+  }
+
+  .toggle-2.ng-leave-active{
+    opacity: 0;
+  }
+}

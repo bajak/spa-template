@@ -1,0 +1,17 @@
+<br/>
+<div id="user">
+    <form class="not-authenticated">
+        <div ng-switch="model.error">
+            <label class="error" ng-switch-when="1">Error: Username do not exists.</label>
+            <label class="error" ng-switch-when="2">Error: Password is incorrect.</label>
+            <label class="error" ng-switch-when="3">Error: Username is already taken.</label>
+        </div>
+        <br/>
+        <input type="text" ng-model="model.username" placeholder="Username" required/>
+        <input type="text" ng-model="model.password" placeholder="Password" required/>
+        <input type="submit" ng-click="model.login()" value="Login" />
+        <input type="submit" ng-click="model.create()" value="Create" />
+    </form>
+    <label class="authenticated">You're logged in !</label>
+    <input class="authenticated" type="submit" ng-click="model.logout()" value="Logout" />
+</div>
